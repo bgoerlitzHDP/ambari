@@ -104,6 +104,10 @@ export default Ember.Component.extend(Validations, {
     },
     cancelDatasetOperation(){
       this.sendAction('cancel');
+    },
+    clearDoneFlag(){
+      this.set('dataset.doneFlag.value', '');
+      this.set('dataset.doneFlag.type', 'default');
     }
   }
 });
